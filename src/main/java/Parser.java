@@ -50,6 +50,9 @@ public class Parser {
         if (answerCode == 200) {
             String city = data.getString("name");
             int currentHour = LocalTime.now().getHour() + 3;
+            if (currentHour == 24)
+                currentHour = 0;
+
             String currentTime = currentHour +":"+LocalTime.now().getMinute();
             String temp = Math.round(data.getJSONObject("main").getInt("temp")) + " C°";
             String info = data.getJSONArray("weather").getJSONObject(0).getString("description");
@@ -70,6 +73,8 @@ public class Parser {
         if (answerCode == 200) {
             String cityName = data.getJSONObject("city").getString("name");
             int currentHour = LocalTime.now().getHour() + 3;
+            if (currentHour == 24)
+                currentHour = 0;
             int constraint = ((24 - currentHour) / 3) + 1;
             String currentDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " — " + currentHour +":"+LocalTime.now().getMinute();
             // Header
