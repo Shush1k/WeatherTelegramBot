@@ -180,13 +180,13 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "";
+        return "Weather_Shush1k";
     }
 
 
     @Override
     public String getBotToken() {
-        return "";
+        return "1465429676:AAE8_nZOkELdsiWkHlFdoZBSC50q3XUCgx8";
     }
 
 }
