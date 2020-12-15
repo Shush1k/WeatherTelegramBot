@@ -73,9 +73,10 @@ public class Parser {
         if (answerCode == 200) {
             String cityName = data.getJSONObject("city").getString("name");
             int currentHour = LocalTime.now().getHour() + 3;
-            if (currentHour == 24)
-                currentHour = 0;
-            int constraint = ((24 - currentHour) / 3) + 1;
+//            if (currentHour == 24)
+//                currentHour = 0;
+//            int constraint = ((24 - currentHour) / 3) + 1;
+            int constraint = 9;
             String currentDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + " — " + currentHour +":"+LocalTime.now().getMinute();
             // Header
             answer = "Город: " + cityName + "\nДата: " + currentDate + "\n\n";
