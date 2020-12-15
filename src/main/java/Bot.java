@@ -145,7 +145,7 @@ public class Bot extends TelegramLongPollingBot {
                         if (city != null) {
                             write(chadId, city);
                             sendMsg(chadId, "Вы подписались на ежедневную рассылку города " + city +
-                                "\nв 10:00 будет приходить уведомление");
+                                "\nв 9:00 будет приходить уведомление");
                         }
                         else
                             sendMsg(chadId, "Укажите город, прежде чем подписываться");
