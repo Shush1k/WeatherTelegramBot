@@ -12,7 +12,7 @@ public class Subscription extends Thread {
             while (true)
             {
                 // Время отправки погоды
-                if (LocalTime.now().getHour() == 10) {
+                if (LocalTime.now().getHour() == 9) {
                     Map<String, String> subInfo = bot.read();
 
                     for (Map.Entry<String, String> user : subInfo.entrySet()) {
