@@ -85,7 +85,7 @@ public class Parser {
             for (int hour = 0; hour < constraint; hour++){
                 JSONObject nowHour = data.getJSONArray("list").getJSONObject(hour);
                 String time = nowHour.getString("dt_txt").substring(11, 16);
-                String temp = Math.round(nowHour.getJSONObject("main").getInt("temp")) + " C°";
+                String temp = "\uD83C\uDF21 " +Math.round(nowHour.getJSONObject("main").getInt("temp")) + " C°";
                 String info = nowHour.getJSONArray("weather").getJSONObject(0).getString("description");
                 info = printable(info);
 
